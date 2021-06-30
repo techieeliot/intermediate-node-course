@@ -32,11 +32,12 @@ function sendResponse(res,err,data){
   }
 }
 
-app.post('/users',(req,res)=>{
-  User.create(
-    {
-      ...req.body.newData
-    },
+app.post('/users', (req, res) => {
+  console.log(req.body.newData)
+    User.create([])
+  // User.create(
+  //   {
+  //   },
         (err,data)=>{sendResponse(res,err,data)})
 })
 
